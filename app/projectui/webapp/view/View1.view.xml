@@ -1,0 +1,24 @@
+<mvc:View controllerName="demo.cpi.projectui.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Email Recipients" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                <f:content>
+                    <Label id="idLabelTo" text="To" required="true"/>
+                    <MultiInput id="idInputEmailAddTo" showValueHelp="false" change="onEmailChangeAdd" />
+                    <Label id="idLabelCC" text="CC" />
+                    <MultiInput id="idInputEmailAddCC"  showValueHelp="false" change="onEmailChangeAdd" />
+                    <Label id="idLabelDate" text="Order Date" required="true"/>
+                    <DatePicker id="idDatepicker" valueFormat="d MMM y"></DatePicker>
+                    <OverflowToolbar id="otb1">
+                        <ToolbarSpacer/>
+                        <Button text="Send Email" type="Emphasized" press="onSaveData"/>
+                    </OverflowToolbar>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>
